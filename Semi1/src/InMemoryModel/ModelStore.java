@@ -18,7 +18,7 @@ public class ModelStore implements IModelChanger {
     /**
      * конструктор
      *
-     * @param texture
+     * @param Texture
      * @throws Exception
      */
     public ModelStore(List<IModelChangedObserver> changedObservers) throws Exception {
@@ -57,7 +57,7 @@ public class ModelStore implements IModelChanger {
      * @param sender
      */
     @Override
-    public void notifyChange(IModelChanger sender) {
+    public void notifyChanger(IModelChanger sender) {
 
     }
 }
