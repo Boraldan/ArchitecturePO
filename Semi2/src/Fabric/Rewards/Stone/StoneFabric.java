@@ -1,7 +1,7 @@
-package Rewards.Stone;
+package Fabric.Rewards.Stone;
 
-import Classes.ItemGenerator;
-import Classes.IGameItem;
+import Fabric.Classes.ItemGenerator;
+import Fabric.Classes.IGameItem;
 
 public class StoneFabric extends ItemGenerator  {
     @Override

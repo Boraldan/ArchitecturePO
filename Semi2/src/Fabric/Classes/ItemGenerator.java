@@ -1,4 +1,4 @@
-package Classes;
+package Fabric.Classes;
 
 public abstract class ItemGenerator {
     public abstract IGameItem createItem();

@@ -1,7 +1,7 @@
-package Rewards.Mana;
+package Fabric.Rewards.Mana;
 
-import Classes.ItemGenerator;
-import Classes.IGameItem;
+import Fabric.Classes.ItemGenerator;
+import Fabric.Classes.IGameItem;
 
 public class ManaFabric extends ItemGenerator {
     @Override

@@ -1,7 +1,7 @@
-package Rewards.Gold;
+package Fabric.Rewards.Gold;
 
-import Classes.ItemGenerator;
-import Classes.IGameItem;
+import Fabric.Classes.ItemGenerator;
+import Fabric.Classes.IGameItem;
 
 public class GoldFabric extends ItemGenerator {
 

@@ -1,7 +1,7 @@
-package Rewards.Gem;
+package Fabric.Rewards.Gem;
 
-import Classes.ItemGenerator;
-import Classes.IGameItem;
+import Fabric.Classes.ItemGenerator;
+import Fabric.Classes.IGameItem;
 
 public class GemFabric extends ItemGenerator  {
      @Override

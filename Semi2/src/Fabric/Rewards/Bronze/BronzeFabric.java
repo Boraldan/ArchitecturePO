@@ -1,6 +1,6 @@
-package Rewards.Bronze;
-import Classes.ItemGenerator;
-import Classes.IGameItem;
+package Fabric.Rewards.Bronze;
+import Fabric.Classes.ItemGenerator;
+import Fabric.Classes.IGameItem;
 
 public class BronzeFabric extends ItemGenerator {
     @Override

@@ -1,16 +1,18 @@
+package Fabric;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-import Classes.ItemGenerator;
-import Rewards.Bronze.BronzeFabric;
-import Rewards.Gem.GemFabric;
-import Rewards.Gold.GoldFabric;
-import Rewards.Iron.IronFabric;
-import Rewards.Mana.ManaFabric;
-import Rewards.Silver.SilverFabric;
-import Rewards.Stone.StoneFabric;
+import Fabric.Rewards.Bronze.BronzeFabric;
+import Fabric.Classes.ItemGenerator;
+import Fabric.Rewards.Gem.GemFabric;
+import Fabric.Rewards.Gold.GoldFabric;
+import Fabric.Rewards.Iron.IronFabric;
+import Fabric.Rewards.Mana.ManaFabric;
+import Fabric.Rewards.Silver.SilverFabric;
+import Fabric.Rewards.Stone.StoneFabric;
 
 public class App {
     public static void main(String[] args) throws Exception {
