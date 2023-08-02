@@ -5,19 +5,16 @@ package Models;
  */
 public class BankAccount {
 
-//    private User user;
     private long card;
     private int balance;
-//    private long oldCard;
 
     public BankAccount(int num) {
-//        this.user = new User()
+
         try {
             this.card = num;
         } catch (Exception e) {
             System.out.println("Проблема в BankAccount");
         }
-//        oldCard = this.card;
         balance = 1000;
     }
 
@@ -32,10 +29,6 @@ public class BankAccount {
     public void setBalance(int balance) {
         this.balance = balance;
     }
-
-//    public long getOldCard() {
-//        return oldCard;
-//    }
 
     @Override
     public String toString() {
