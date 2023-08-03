@@ -47,6 +47,6 @@ public class TicketProvider {
      */
     public boolean updateTicketStatus(Ticket ticket) {
         ticket.setValid(false);
-        return true;
+        return ticketRepo.update(ticket);
     }
 }

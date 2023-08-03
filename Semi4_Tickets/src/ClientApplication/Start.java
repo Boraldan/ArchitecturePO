@@ -3,6 +3,7 @@ package ClientApplication;
 import Core.Customer;
 import Interfaces.ICustomer;
 import Models.Ticket;
+import Services.TicketRepository;
 
 import java.util.Date;
 import java.util.List;
@@ -140,6 +141,7 @@ public class Start extends EnterData {
             int choice = 0;
             try {
                 choice = inputInt(0, 1);
+                TicketRepository.getTicketRepository().printTickets(choice, TicketRepository.getTicketRepository().getTickets());
             } catch (RuntimeException ex) {
                 System.out.println("==============================================================================" +
                         "=======");

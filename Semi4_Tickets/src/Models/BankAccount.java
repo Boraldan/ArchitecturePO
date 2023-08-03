@@ -8,10 +8,10 @@ public class BankAccount {
     private long card;
     private int balance;
 
-    public BankAccount(int num) {
+    public BankAccount(int cardNum) {
 
         try {
-            this.card = num;
+            this.card = cardNum;
         } catch (Exception e) {
             System.out.println("Проблема в BankAccount");
         }

@@ -60,6 +60,17 @@ public class TicketRepository implements ITicketRepo {
         return tickets;
     }
 
+    public void printTickets(int routeNumber, List<Ticket> tickets) throws RuntimeException {
+        for (Ticket ticket : tickets) {
+            if (ticket.getRouteNumber() == routeNumber && ticket.getValid() == true) {
+                System.out.println("Ticket" + " Route Number " + routeNumber +
+                        " Place " + ticket.getPlace() +
+                        " Price " + ticket.getPrice() + " rub." +
+                        " Date " + ticket.getDate());
+            }
+        }
+    }
+
     @Override
     public boolean update(Ticket ticket) {
         for (Ticket tick : tickets) {

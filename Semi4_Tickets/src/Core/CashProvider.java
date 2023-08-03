@@ -1,5 +1,6 @@
 package Core;
 
+
 import Interfaces.ICarrierRepo;
 import Interfaces.ICashRepo;
 import Models.BankAccount;
@@ -37,7 +38,7 @@ public class CashProvider {
      * @throws RuntimeException
      */
 
-    public boolean buy(Ticket ticket) {
+    public boolean buy(Ticket ticket) throws RuntimeException {
         if (isAuthorized) {
             Carrier carrier = carrierRepository.read(1);
             return cashRepository.transaction(ticket.getPrice(), cardNumber, carrier.getCardNumber());
@@ -47,19 +48,19 @@ public class CashProvider {
     /**
      * Метод авторизации клиента. Здесь должно быть реализовано обращение к банку для подтверждения личности клиента.
      *
-//     * @param client
+     //     * @param client
      */
-     public void authorization(User user) throws RuntimeException {
-         boolean flag = false;
-         for (BankAccount findCard : cashRepository.getClients()){
-             if (findCard.getCard() == user.getCardNumber()){
-                 this.cardNumber = findCard.getCard();
-                 this.isAuthorized = true;
-                 flag = true;
-                 break;
-             }
-         }
-         if (flag == false)
+    public void authorization(User user) throws RuntimeException {
+        boolean flag = false;
+        for (BankAccount findCard : cashRepository.getClients()){
+            if (findCard.getCard() == user.getCardNumber()){
+                cardNumber = findCard.getCard();
+                isAuthorized = true;
+                flag = true;
+                break;
+            }
+        }
+        if (flag == false)
             throw new RuntimeException("A client with this CardNumber not found");
-     }
+    }
 }

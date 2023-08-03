@@ -1,6 +1,8 @@
 package Models;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Модель билета
@@ -12,7 +14,6 @@ public class Ticket{
     private int price;
     private Date date;
     private boolean isValid;
-
 
     public Ticket(int routeNumber, int place, int price, Date date, boolean isValid) {
         this.routeNumber = routeNumber;
@@ -77,7 +78,6 @@ public class Ticket{
         }
         return this.equals((Ticket) obj);
     }
-
 
     public boolean equals(Ticket ticket) {
         boolean isIt = ticket != null
