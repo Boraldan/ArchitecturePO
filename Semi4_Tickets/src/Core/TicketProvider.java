@@ -27,16 +27,7 @@ public class TicketProvider {
      * @throws RuntimeException
      */
     public List<Ticket> getTickets(int routeNumber) throws RuntimeException {
-        List<Ticket> routeTickets = new ArrayList<>();
-        for (Ticket ticket : ticketRepo.getTickets()) {
-            if (ticket.getRouteNumber() == routeNumber && ticket.getValid() == true) {
-                routeTickets.add(ticket);
-            }
-        }
-        if (routeTickets.isEmpty()) {
-            throw new RuntimeException("There are no tickets for this bus.");
-        }
-        return routeTickets;
+        return ticketRepo.readAll(routeNumber);
     }
 
     /**

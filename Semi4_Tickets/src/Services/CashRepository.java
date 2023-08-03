@@ -11,16 +11,14 @@ import java.util.List;
  */
 public class CashRepository implements ICashRepo {
     private static CashRepository cashRepository;
-
     private List<BankAccount> clients;
 
     private CashRepository() {
         //имитация работы банка
         clients = new ArrayList<>();
         for (int i = 1; i <= 5; i++) {
-            clients.add(new BankAccount(i));
+            clients.add(new BankAccount());
         }
-
     }
 
     public static CashRepository getCashRepository() {

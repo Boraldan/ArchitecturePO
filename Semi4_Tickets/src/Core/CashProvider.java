@@ -16,7 +16,7 @@ import Services.CashRepository;
 public class CashProvider {
 
     private long cardNumber;
-    private boolean isAuthorized;
+    private boolean isAuthorized = false;
     private ICarrierRepo carrierRepository;
     private ICashRepo cashRepository;
 
@@ -45,15 +45,16 @@ public class CashProvider {
         }
         return false;
     }
+
     /**
      * Метод авторизации клиента. Здесь должно быть реализовано обращение к банку для подтверждения личности клиента.
-     *
-     //     * @param client
+     * <p>
+     * //     * @param client
      */
     public void authorization(User user) throws RuntimeException {
         boolean flag = false;
-        for (BankAccount findCard : cashRepository.getClients()){
-            if (findCard.getCard() == user.getCardNumber()){
+        for (BankAccount findCard : cashRepository.getClients()) {
+            if (findCard.getCard() == user.getCardNumber()) {
                 cardNumber = findCard.getCard();
                 isAuthorized = true;
                 flag = true;

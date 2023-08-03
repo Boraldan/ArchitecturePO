@@ -57,7 +57,7 @@ public class TicketRepository implements ITicketRepo {
         if (routeTickets.isEmpty()) {
             throw new RuntimeException("There are no tickets for this bus.");
         }
-        return tickets;
+        return routeTickets;
     }
 
     public void printTickets(int routeNumber, List<Ticket> tickets) throws RuntimeException {

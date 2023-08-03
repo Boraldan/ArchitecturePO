@@ -6,16 +6,13 @@ package Models;
 public class BankAccount {
 
     private long card;
+    private static long idCard;
     private int balance;
 
-    public BankAccount(int cardNum) {
-
-        try {
-            this.card = cardNum;
-        } catch (Exception e) {
-            System.out.println("Проблема в BankAccount");
-        }
-        balance = 1000;
+    public BankAccount() {
+        this.card = idCard + 1;
+        idCard = this.card;
+        this.balance = 1000;
     }
 
     public long getCard() {
