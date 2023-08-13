@@ -1,6 +1,5 @@
 package Core;
 
-
 import Interfaces.ICarrierRepo;
 import Interfaces.ICashRepo;
 import Models.BankAccount;
@@ -49,19 +48,17 @@ public class CashProvider {
     /**
      * Метод авторизации клиента. Здесь должно быть реализовано обращение к банку для подтверждения личности клиента.
      * <p>
-     * //     * @param client
+     *
+     * @param user
      */
     public void authorization(User user) throws RuntimeException {
-        boolean flag = false;
         for (BankAccount findCard : cashRepository.getClients()) {
             if (findCard.getCard() == user.getCardNumber()) {
                 cardNumber = findCard.getCard();
                 isAuthorized = true;
-                flag = true;
-                break;
+                return;
             }
         }
-        if (flag == false)
-            throw new RuntimeException("A client with this CardNumber not found");
+        throw new RuntimeException("A client with this CardNumber not found");
     }
 }
