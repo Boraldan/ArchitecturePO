@@ -1,22 +1,33 @@
 package Service;
 
 import Domen.Order;
-import ModelData.Bank.CashProvider;
+
 
 public class ServicePay {
     private ServiceOrder serviceOrder;
-    private CashProvider cashProvider;
+    private ServiceProvider serviceProvider;
 
-    public ServicePay(ServiceOrder serviceOrder) {
-        this.serviceOrder = serviceOrder;
-        this.cashProvider = new CashProvider();
+    public ServicePay(ServiceProvider serviceProvider) {
+        this.serviceProvider = serviceProvider;
     }
 
     public boolean payOrder(Order order) throws RuntimeException {
         boolean flag;
-        cashProvider.authorization(order.getUser());
-        flag = cashProvider.buy(order);
+        serviceProvider.getPresenter().getiRepo().getCashProvider().authorization(order.getUser());
+        flag = serviceProvider.getPresenter().getiRepo().getCashProvider().buy(order);
         return flag;
+    }
+
+    public ServiceProvider getServiceProvider() {
+        return serviceProvider;
+    }
+
+    public void setServiceProvider(ServiceProvider serviceProvider) {
+        this.serviceProvider = serviceProvider;
+    }
+
+    public void setServiceOrder(ServiceOrder serviceOrder) {
+        this.serviceOrder = serviceOrder;
     }
 
     public ServiceOrder getServiceOrder() {

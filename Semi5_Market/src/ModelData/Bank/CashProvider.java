@@ -25,6 +25,9 @@ public class CashProvider {
         this.cashRepository = CashRepository.getCashRepository();
     }
 
+    public CashRepository getCashRepository() {
+        return cashRepository;
+    }
 
     public boolean buy(Order order) throws RuntimeException {
         if (isAuthorized) {

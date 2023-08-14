@@ -1,20 +1,24 @@
 package Presenter;
 
-import Service.IServiceProduct;
+import ModelData.IRepo;
+import ModelData.RepoProvider;
+import Service.IServiceProvider;
 import Service.ServiceProvider;
 import View.View;
 
 public class Presenter {
 
     private View view;
-    private IServiceProduct serviceProduct;
+    private IServiceProvider serviceProduct;
+    private IRepo iRepo;
 
     public Presenter() {
         this.view = new View(this);
-        this.serviceProduct = new ServiceProvider();
+        this.serviceProduct = new ServiceProvider(this);
+        this.iRepo = new RepoProvider();
     }
 
-    public IServiceProduct getServiceProduct() {
+    public IServiceProvider getServiceProduct() {
         return serviceProduct;
     }
 
@@ -22,9 +26,7 @@ public class Presenter {
         return view;
     }
 
-
-
-
-
-
+    public IRepo getiRepo() {
+        return iRepo;
+    }
 }

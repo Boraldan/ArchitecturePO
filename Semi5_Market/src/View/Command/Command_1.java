@@ -18,7 +18,7 @@ public class Command_1 implements IOption {
 
     public void doit() {
         PrintList productList = new PrintList();
-        productList.PrintProductList(view.getPresenter().getServiceProduct().getServiceCar().getCarList());
+        productList.PrintProductList(view.getPresenter().getiRepo().getRepoCar().getCarList());
     }
 
     //        view.load(); //  или запустить команды прописанных в этом методе
