@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 import Fabric.Rewards.Bronze.BronzeFabric;
-import Fabric.Classes.ItemGenerator;
+import Fabric.Classes.Fabric;
 import Fabric.Rewards.Gem.GemFabric;
 import Fabric.Rewards.Gold.GoldFabric;
 import Fabric.Rewards.Iron.IronFabric;
@@ -16,25 +16,25 @@ import Fabric.Rewards.Stone.StoneFabric;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ItemGenerator fabGold = new GoldFabric();
+        Fabric fabGold = new GoldFabric();
         fabGold.openReward();
-        ItemGenerator fabGem = new GemFabric();
+        Fabric fabGem = new GemFabric();
         fabGem.openReward();
         //System.out.println("Hello, World!");
-        ItemGenerator fabBronze = new BronzeFabric();
+        Fabric fabBronze = new BronzeFabric();
         fabBronze.openReward();
-        ItemGenerator fabIron = new IronFabric();
+        Fabric fabIron = new IronFabric();
         fabIron.openReward();
-        ItemGenerator fabMana = new ManaFabric();
+        Fabric fabMana = new ManaFabric();
         fabMana.openReward();
-        ItemGenerator fabSilver = new SilverFabric();
+        Fabric fabSilver = new SilverFabric();
         fabSilver.openReward();
-        ItemGenerator fabStone = new StoneFabric();
+        Fabric fabStone = new StoneFabric();
         fabStone.openReward();
 
 
         Random rnd = ThreadLocalRandom.current();
-        List<ItemGenerator> fabricList = new ArrayList<>();
+        List<Fabric> fabricList = new ArrayList<>();
         fabricList.add(fabGold);
         fabricList.add(fabGem);
         fabricList.add(fabBronze);

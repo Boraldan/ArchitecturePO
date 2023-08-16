@@ -1,6 +1,6 @@
 package Fabric.Classes;
 
-public abstract class ItemGenerator {
+public abstract class Fabric {
     public abstract IGameItem createItem();
     public void openReward() {
         IGameItem gameItem = createItem();

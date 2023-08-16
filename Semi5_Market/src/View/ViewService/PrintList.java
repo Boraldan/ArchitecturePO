@@ -1,4 +1,4 @@
-package View.Service;
+package View.ViewService;
 
 import java.util.List;
 
