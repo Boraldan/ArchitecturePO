@@ -30,7 +30,7 @@ public class App {
        iGetModel mod = new Model(students);
        iGetView viw = new View();
 
-       iGetController control = new Controller(mod, viw);
+       iGetController control = new Controller(mod,viw);
        viw.setController(control);
 
 

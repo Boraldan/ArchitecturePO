@@ -3,8 +3,6 @@ package ModelData.Bank;
 import Domen.Order;
 import Domen.User;
 
-import java.util.List;
-
 /**
  * Класс - провайдер для взаимодействия с банком и базой перевозчиков
  */

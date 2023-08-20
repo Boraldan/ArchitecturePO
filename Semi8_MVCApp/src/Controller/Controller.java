@@ -17,6 +17,8 @@ public class Controller implements iGetController {
         this.view = view;
     }
 
+
+
     private boolean testData(List<Student> studs)
     {
         if(studs.size()>0)
