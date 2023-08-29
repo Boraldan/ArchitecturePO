@@ -1,7 +1,6 @@
 package View;
 
-import Domen.Products.ProductBike;
-import Domen.Products.ProductCar;
+
 import Presenter.Presenter;
 import View.Command.Command_1;
 import View.Command.IOption;
